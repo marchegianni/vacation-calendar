@@ -1,0 +1,41 @@
+<!--<div class="jumbotron">
+<h1>'Allo, 'Allo!</h1>
+<p class="lead">
+<img src="images/yeoman.png" alt="I'm Yeoman"><br>
+Always a pleasure scaffolding your apps.
+</p>
+<p><a class="btn btn-lg btn-success" ng-href="#/about">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+</div>
+
+<div class="row marketing">
+<h4>HTML5 Boilerplate</h4>
+<p>
+HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+</p>
+
+<h4>Angular</h4>
+<p>
+AngularJS is a toolset for building the framework most suited to your application development.
+</p>
+
+<h4>Karma</h4>
+<p>Spectacular Test Runner for JavaScript.</p>
+</div>-->
+<table class="calendar">
+  <tr class="month">
+    <th class="prev"><a href="#/" ng-click="changeMonth(-1)">&lt;&lt;</a></th>
+    <th class="curr">{{main.today | date:"MMMM yyyy"}}</th>
+    <th class="next""><a href="#/" ng-click="changeMonth(1)">&gt;&gt;</a></th>
+  </tr>
+  <tr ng-repeat="employee in main.employees" class="days">
+    <td class="name">{{employee.name}}</td>
+    <td ng-repeat="day in main.daysInMonth" class="{{day.dayOfWeek}}" ng-style="(isOver == 'true') ? {'background-color': 'pink'} : {}" ng-mousedown="setSelectStartDate(this.day.number, this.$parent.employee.name)" ng-mouseup="setSelectEndDate(this.day.number, this.$parent.employee.name)" ng-mouseenter="setColor('true')" ng-mouseleave="setColor('false')">{{day.number}}</td>
+  </tr>
+</table>
+
+<div class="types">
+  <ul>
+    <!--<li ng-repeat="type in main.types"><span class="square {{type.color}}"></span><span class="name">{{type.name}}</span></li><br/>-->
+    <li ng-repeat="type in main.types"><label><input type="radio" name="selectedDayType" value="{{type.color}}" class="day-types {{type.color}}" /><span>{{type.name}}</span></label></li>
+  </ul>
+</div>

@@ -1,0 +1,270 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+/*@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1250px;
+  }
+
+  /* Remove the padding we set earlier */
+  /*.header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  /*.header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  /*.jumbotron {
+    border-bottom: 0;
+  }
+}*/
+
+/***************************************************************/
+
+@media screen {
+  .container {
+    width: 1400px;
+    margin-bottom: 30px;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 10px 20px 10px;
+}
+
+/*ul {
+  list-style: none;
+}*/
+th {
+  margin-bottom: 10px;
+}
+th.prev {
+  border-radius: 5px 0 0 5px;
+}
+th.curr {
+  border-radius: 0 0 0 0;
+}
+th.next {
+  border-radius: 0 5px 5px 0;
+}
+td {
+  border-radius: 5px;
+  margin-bottom: 3px;
+}
+table.calendar th {
+  float: left;
+  display: inline-block;
+  width: 33.33%;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #555555;
+  /*-webkit-font-smoothing: antialiased;*/
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #000000;
+  box-shadow: 1px 1px rgba(0,0,0,0.4);
+}
+table.calendar td {
+  float: left;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #555555;
+  /*-webkit-font-smoothing: antialiased;*/
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.25);
+  border: 1px solid #000000;
+  box-shadow: 1px 1px rgba(0,0,0,0.4);
+}
+table.calendar td.name {
+  width: 180px;
+}
+td.weekday {
+  background-color: yellow;
+}
+td.weekend {
+  background-color: orange;
+}
+div.types ul {
+  float: left;
+  display: inline-block;
+  padding: 30px 10px 20px 10px;
+}
+div.types li {
+  float: left;
+  display: inline-block;
+}
+span.square {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border: 1px solid #000000;
+}
+span.vacation {
+  background-color: pink;
+}
+span.home-office {
+  background-color: blue;
+}
+span.training {
+  background-color: green;
+}
+span.another-office {
+  background-color: lightblue;
+}
+input[type='radio'] {
+  position: relative;
+  top: 2px;
+  left: -1px;
+}
+input.day-types {
+  margin-left: 10px;
+}
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  /*background-color: #d1d3d1;*/
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+input[type='radio'].vacation:after {
+  background-color: pink;
+}
+input[type='radio'].home-office:after {
+  background-color: blue;
+}
+input[type='radio'].training:after {
+  background-color: green;
+}
+input[type='radio'].another-office:after {
+  background-color: lightblue;
+}
+
+/*input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}*/
+
+input[type='radio'] + span {
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+input[type='radio']:checked + span {
+  border-width: 4px
+  border-style: solid;
+  border-radius: 10px;
+}
+
+input[type='radio'].vacation:checked + span {
+  border-color: pink;
+  background-color: pink;
+}
+
+input[type='radio'].home-office:checked + span {
+  border-color: blue;
+  background-color: blue;
+  color: white;
+}
+
+input[type='radio'].training:checked + span {
+  border-color: green;
+  background-color: green;
+  color: white;
+}
+
+input[type='radio'].another-office:checked + span {
+  border-color: lightblue;
+  background-color: lightblue;
+}
